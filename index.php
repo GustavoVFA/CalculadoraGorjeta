@@ -8,17 +8,13 @@ if(isset($_POST['valor'])){
 $valor = $_POST['valor'];
 $gorjeta = $_POST['gorjeta'];
 
-
 $conta = new Conta();
 
 $conta->setValor($valor);
 $conta->setGorjeta($gorjeta);
 
-
-
 $valor = $conta->getValor() * $conta->getGorjeta();
 $gorjeta = ($conta->getValor() * $conta->getGorjeta()) - $conta->getValor();
-
 }
 
 ?>
